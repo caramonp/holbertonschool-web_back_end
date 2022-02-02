@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
-""" asynchronous coroutine that takes in an integer argument """
+"""Python and Async measure time"""
+
 import asyncio
 import time
-from typing import List
 
-wait_n =  __import__('1-concurrent_coroutines').wait_n
+wait_n = __import__('1-concurrent_coroutines').wait_n
 
-async def measure_time(n: int, max_delay: int)-> List[float]:
+
+def measure_time(n: int, max_delay: int) -> float:
     """returns total_time / ni measure"""
     start = time.perf_counter()
     asyncio.run(wait_n(n, max_delay))
