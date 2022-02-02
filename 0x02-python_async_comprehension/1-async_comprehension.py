@@ -14,5 +14,5 @@ async def async_comprehension() -> Generator[float, None, None]:
         [float]: [10 radom numbers from async_genrator]
 
     """
-    numbers = for i async for i in async_generator(10)
+    numbers = for i async for i in async_generator()
     return numbers
