@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """Pagination"""
 import csv
-import math
 from typing import Tuple, List
 
 
@@ -30,10 +29,10 @@ class Server:
         return self.__dataset
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
-        assert isinstance(page, int), "page should be integer"
-        assert isinstance(page_size, int), "page_size should be integer"
-        assert page > 0, "page should be greater than 0"
-        assert page_size > 0, "page_size should be greater than 0"
+        assert isinstance(page, int)
+        assert page > 0
+        assert isinstance(page_size, int)
+        assert page_size > 0
 
-        start, end = index_range(page, page_size)
-        return self.dataset()[start:end]
+        a, b = index_range(page, page_size)
+        return self.dataset()[a:b]
