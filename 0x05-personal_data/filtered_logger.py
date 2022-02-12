@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-    """Personal Data- Log formatter
-    """
+"""Personal Data- Log formatter
+"""
 from typing import List
 import logging
 import csv
