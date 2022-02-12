@@ -11,3 +11,9 @@ def hash_password(password: str) -> bytes:
     """
     salt = bcrypt.gensalt()
     return bcrypt.hashpw(str.encode(password), salt)
+
+
+def is_valid(hashed_password: bytes, password: str) -> bool:
+    """ Check valid password
+    """
+    return bcrypt.checkpw(password, hash_password)
