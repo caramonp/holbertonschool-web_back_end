@@ -6,7 +6,7 @@ import hashlib
 import bcrypt
 
 
-def hash_password(password: str)-> bytes:
+def hash_password(password: str) -> bytes:
     """ function that expects password and returns a salted
     """
     salt = bcrypt.gensalt()
