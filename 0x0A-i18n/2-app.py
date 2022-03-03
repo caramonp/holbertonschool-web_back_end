@@ -22,4 +22,10 @@ babel = Babel(app)
 def index():
     """ return index.html
     """
-    return render_template('1-index.html')
+    return render_template('2-index.html')
+
+@babel.localeselector
+def get_locale():
+    """Get locale from request
+    """
+    return request.accept_languages.best_match(['de', 'fr', 'en'])
