@@ -14,9 +14,8 @@ class Config(object):
 
 
 app = Flask(__name__)
-app.config.from_objec(Config)
 babel = Babel(app)
-
+app.config.from_objec(Config)
 
 @app.route('/')
 def index():
