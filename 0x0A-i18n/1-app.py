@@ -14,10 +14,11 @@ class Config(object):
 
 
 app = Flask(__name__)
-babel = Babel(app)
 app.config.from_objec(Config)
+babel = Babel(app)
 
-@app.route('/')
+
+@app.route('/', methods=["GET"], strict_slashes=False)
 def index():
     """ return index.html
     """
