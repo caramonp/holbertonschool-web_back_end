@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """basic Babel setup
 """
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from flask_babel import Babel
 
 
@@ -23,6 +23,7 @@ def index():
     """ return index.html
     """
     return render_template('2-index.html')
+
 
 @babel.localeselector
 def get_locale():
