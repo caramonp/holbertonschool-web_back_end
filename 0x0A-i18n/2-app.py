@@ -28,4 +28,4 @@ def index():
 def get_locale():
     """Get locale from request
     """
-    return request.accept_languages.best_match(['de', 'fr', 'en'])
+    return request.accept_languages.best_match(app.config['LANGUAGES'])
