@@ -1,4 +1,3 @@
-import handleResponseFromAPI from './2-then';
-
-const promise = Promise.resolve();
-handleResponseFromAPI(promise);
+export default function getResponseFromAPI() {
+    return new Promise((resolve, reject) => [resolve, reject]);
+}
