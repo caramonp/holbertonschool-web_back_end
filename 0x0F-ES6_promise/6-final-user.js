@@ -1,8 +1,8 @@
-import signUpser from './4-user-promise.js';
-import uploadPhoto from './5-photo-reject.js';
+import signUpser from './4-user-promise';
+import uploadPhoto from './5-photo-reject';
 
-export default function handleProfileSignup (firstName, lastName, fileName){
-    const promises = [signUpser, uploadPhoto]
-    return Promise.allSettled(promises)
-    .then((results) => results.forEach((result) => (result)))
+export default function handleProfileSignup(firstName, lastName, fileName) {
+  const promises = [signUpser(firstName, lastName), uploadPhoto(fileName)];
+  return Promise.allSettled(promises)
+    .then((results) => results.forEach((result) => (result)));
 }
