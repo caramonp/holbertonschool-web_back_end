@@ -6,7 +6,7 @@ export default function cleanSet(theSet, startString) {
         newArray.push(element.replace('bon', ''));
       }
     });
-  } else if (typeof (startString) !== typeof (String)) {
+  } else if (typeof (startString) !== 'string') {
     return ('');
   } else {
     return ('');
